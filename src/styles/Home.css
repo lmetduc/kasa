@@ -1,0 +1,15 @@
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f6;
+    border-radius: 20px;
+    width: 90%;
+    justify-self: center;
+    padding: 20px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+  }
+
+  .block-card {
+    margin: 10px;
+  }

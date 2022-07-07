@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: black;
+    height : 180px;
+    width: 100%;
+}
+
+.mention {
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.kasa-logo_white {
+align-items: center;
+width: 120px;
+height: auto;
+
+}

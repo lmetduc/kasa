@@ -1,14 +1,25 @@
 import Product from "./Product";
 import "../styles/House.css";
-import Banner from "./Banner";
-import banner from "../assets/banner.png";
-import star from "../assets/star.png";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Accordion from "./Accordion";
+import Carousel from "./Carousel";
+import Rating from "./Rating";
 
 export default function House() {
-  const [data, setData] = useState(null);
-  let {id} = useParams();
+  const [data, setData] = useState({
+    id: "",
+    title: "",
+    cover: "",
+    pictures: [],
+    description: "",
+    host: { name: "", picture: "" },
+    rating: "",
+    location: "",
+    equipments: [],
+    tags: [],
+  });
+  const { id } = useParams();
 
   useEffect(() => {
     // declare the async data fetching function
@@ -16,7 +27,7 @@ export default function House() {
       const data = await fetch("/data.json");
       // convert the data to json
       const json = await data.json();
-      const house = json.find(h => h.id === id);
+      const house = json.find((h) => h.id === id);
       setData(house);
     };
     // call the function
@@ -27,9 +38,32 @@ export default function House() {
 
   return (
     <div>
-      <Banner banner={banner} size="medium" />
-      <div className="product-list">
-        {data && <h1>{data.title}</h1>}
+      <Carousel img={data.pictures} />
+      <div className="house-details">
+        <div className="house-title">
+          <div className="house-name-location">
+            <h1>{data.title}</h1>
+            <span>{data.location}</span>
+          </div>
+          <div className="host-details">
+            <span className="host-name">{data.host.name}</span>
+            <img alt={`${data.host.name}`} src={data.host.picture} />
+          </div>
+        </div>
+        <div className="house-sub-details">
+          <div className="house-tags">
+            {data.tags.map((tag, i) => (
+              <div key={i} className="tag">
+                {tag}
+              </div>
+            ))}
+          </div>
+          <Rating rating={data.rating}/>
+        </div>
+        <div className="house-description-equipments">
+          <Accordion title="Description" content={data.description} />
+          <Accordion title="Équipements" content={data.equipments} />
+        </div>
       </div>
     </div>
   );

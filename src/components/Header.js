@@ -8,7 +8,9 @@ export default function Header() {
   return (
     <div className="kasa-head">
       <div className="kasa-banner">
+        <a href="/" >
         <img src={logo} alt="Kasa" className="kasa-logo" />
+        </a>
         <div className="kasa-block">
           <a className="kasa-nav" href="/">
             {nav1}

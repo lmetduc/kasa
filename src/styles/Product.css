@@ -1,7 +1,12 @@
 .block-card {
+display: flex;
     position: relative;
-}
+    width: 340px;
+    height: 340px;
+    align-self: center;
+    margin: 20px;
 
+}
 
 .block-card:before {
     content: '';
@@ -16,13 +21,16 @@
 }
 
 .card {
+    display: grid;
+    align-self: center;
+    justify-self: center;
 }
 
 .card-title {
   position: absolute;
   bottom: 10px;
   font-size: 12px;
-  max-width: 100px;
+  max-width: 120px;
   color: white;
   padding: 5px;
   z-index: 2;
@@ -30,8 +38,14 @@
 }
 
 .kasa-photo_card {
-    width: 200px;
-    height: 100%;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
     border-radius: 10px;
 
+}
+
+.link {
+    display: flex;
+    justify-content: center;
 }

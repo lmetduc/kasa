@@ -26,9 +26,11 @@ export default function Home() {
     <div>
       <Banner banner={banner} />
       <div className="product-list">
-        {data.map((d, i) => (
-          <Product title={d.title} key={i} cover={d.cover} id={d.id}/>
-        ))}
+        <div className="product-background">
+          {data.map((d, i) => (
+            <Product title={d.title} key={i} cover={d.cover} id={d.id}/>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,77 @@
+.house-details {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.house-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.house-name-location > h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FF6060;
+    margin: 0;
+}
+
+.house-name-location > span {
+    font-size: 12px;
+    color: #FF6060;
+}
+
+.host-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.host-name {
+    font-size: 18px;
+    color: #FF6060;
+    margin: 0 10px;
+}
+
+.host-details > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    object-fit: contain;
+}
+
+.house-sub-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.house-tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #FF6060;
+    color: #FFFFFF;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.house-rating {
+
+}
+
+.house-description-equipments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.house-description-equipments > * {
+    width: 100%;
+}

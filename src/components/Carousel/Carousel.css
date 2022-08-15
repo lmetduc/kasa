@@ -14,7 +14,7 @@ align-items: center;
 
 .carousel {
     overflow: hidden;
-    width: 80%;
+    width: 90%;
     margin: auto;
     position: relative;
 }
@@ -24,8 +24,12 @@ align-items: center;
     transition: transform .5s ease;
 }
 
-.carousel-container-img {
+.carousel-img {
     flex-shrink: 0;
+    height: 415px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
 .carousel-controls {
@@ -40,8 +44,9 @@ align-items: center;
 }
 
 .chevron {
-    width: 30px !important;
-    height: auto !important;
+    width: 30px;
+    height: auto;
+    color: white;
 }
 
 .carousel-index {
@@ -54,7 +59,7 @@ align-items: center;
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
 
     .carousel-index {
         display: none;

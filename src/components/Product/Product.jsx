@@ -1,5 +1,4 @@
-import "../styles/Product.css";
-import photo from "../assets/photo.png";
+import "./Product.css";
 
 export default function Product(props) {
   const title = props.title;

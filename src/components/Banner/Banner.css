@@ -1,0 +1,41 @@
+.kasa-picture {
+  position: relative;
+}
+
+.kasa-photo {
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+  width: 90%;
+  filter: brightness(80%);
+}
+
+@media (max-width: 700px) {
+	.kasa-photo {
+		min-height: 130px;
+	}
+}
+
+.medium {
+  height: 220px;
+}
+
+.text-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  width: 80%;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+	.text-banner {
+		text-align: left;
+	}
+}

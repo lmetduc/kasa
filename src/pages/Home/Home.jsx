@@ -1,7 +1,7 @@
-import Product from "./Product";
-import "../styles/Home.css";
-import Banner from "./Banner";
-import banner from "../assets/banner.png";
+import Product from "../../components/Product/Product";
+import "./Home.css";
+import Banner from "../../components/Banner/Banner";
+import banner from "../../assets/banner.png";
 import { useState, useEffect } from "react";
 
 export default function Home() {

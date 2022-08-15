@@ -1,11 +1,15 @@
 .star {
     color: #FF6060;
-    font-size: 20px;
+    font-size: 25px;
+}
+
+.star, .star-empty {
+    margin-left: 10px;
 }
 
 .star-empty {
     color: #E3E3E3;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 @media (max-width: 600px) {

@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import '../styles/Carousel.css';
+import './Carousel.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function Carousel(props) {
 
@@ -31,13 +33,14 @@ export default function Carousel(props) {
     return (
         <div className="carousel">
             <div className="carousel-container" style={{transform: `translateX(-${slideIndex * imgSize()}px)`}}>
-            {props.img.map((pictures) => <img className='carousel-container-img' src={pictures} key={pictures}/>)}
+            {props.img.map((pictures) => <img className='carousel-img' src={pictures} key={pictures}/>)}
             </div>
             <div className='carousel-controls'>
-                <img src="../assets/chevron-left.png" className={'chevron'} onClick={onPrev}/>
-                <img src="../assets/chevron-right.png" className={'chevron'} onClick={onNext}/>
+            <FontAwesomeIcon icon={faChevronLeft} className="chevron" onClick={onPrev}/>
+            <FontAwesomeIcon icon={faChevronRight} className="chevron" onClick={onNext}/>
+
             </div>
             <div className='carousel-index'>{slideIndex + 1} / {props.img.length}</div>
         </div>
-    );
+    )
 }

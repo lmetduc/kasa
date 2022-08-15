@@ -1,19 +1,7 @@
-/* import "../styles/Rating.css";
-
-export default function Rating(props) {
-    const rating = props.rating;
-    return (
-      <div className="kasa-rating">
-        <img src={rating} alt="Kasa Rating" className="kasa-stars" />
-      </div>
-    );
-  } */
-
-  
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import '../styles/Rating.css';
+import './Rating.css';
 
 const ColoredStar = () => {
     return <FontAwesomeIcon icon={faStar} className="star"/>
